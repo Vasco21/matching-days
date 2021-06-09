@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./css/style.css">
+      <title>Document</title>
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <!-- jQuery library -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <!-- Latest compiled JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+      <title>Matching Days</title>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+      <script type="text/x-template" class="matchingTemplate">
+            <div id="days">
+                {{#each day}}
+                <button id="{{@index}}" type="submit" style='color: {{color}}'>
+                    {{weekDays}}
+                </button>
+                {{/each}}
+            </div>    
+         </script>
+   </head>
+   <body class="hol">
+    <div class="row">
+       <div class="col-12 center">
+           <h1>Matching Days</h1>
+       </div>
+   </div>
+   <div class="row center">
+       <div class="col-6 inline-block">
+           <h2>First Date</h2>
+           <input id="d1" type="date">
+       </div>
+       <div class="col-6 inline-block">
+           <h2>Second Date</h2>
+           <input id="d2" type="date">
+       </div>
+   </div>
+    <div class="row">
+        
+    <div id="templateDisplay" class="col-12">
+
+    </div> 
+</div> 
+ </body>
+      <script type="text/javascript" src="./functions/matcherfunc.js"></script>
+      <script type="text/javascript" src="./functions/matchingdays.js"></script>
+</html>
+
+
+<fieldset>
+    <div id="templateDisplay">
+
+    </div>
+</fieldset>
